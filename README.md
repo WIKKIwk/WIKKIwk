@@ -6,6 +6,13 @@
 
 > I build operational software around ERPNext, industrial hardware, mobile workflows, and guided AI systems.
 
+## Operational Snapshot
+
+| State | Meaning |
+| --- | --- |
+| Already Built | Mobile bridge architecture, ERPNext operator modules, Zebra and RFID workflows, Telegram-driven operations, and guided AI support systems. |
+| In Motion | Tighter orchestration between ERPNext, mobile execution, hardware events, and assistant-led operator workflows. |
+
 ## System Topology
 
 ```text
@@ -30,6 +37,15 @@ ERPNext
 | Hardware | [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core), [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core), [`zebra-rfid-bridge-core`](https://github.com/WIKKIwk/zebra-rfid-bridge-core) | Run printer, RFID, and scale devices inside ERP workflows. |
 | ERPNext Modules | [`erpnext-ui-theme-suite`](https://github.com/WIKKIwk/erpnext-ui-theme-suite), [`erpnext-security-suite`](https://github.com/WIKKIwk/erpnext-security-suite), [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant) | Extend ERPNext with UI, protection, and guided operations. |
 | AI Systems | [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant), [`expert-answer-ai-agent`](https://github.com/WIKKIwk/expert-answer-ai-agent), [`persona-companion-agent`](https://github.com/WIKKIwk/persona-companion-agent) | Build context-aware assistants for support, response, and workflow intelligence. |
+
+## What Exists Today
+
+| Capability | Result |
+| --- | --- |
+| ERPNext to Mobile | Operators can work through a dedicated bridge and mobile execution layer instead of being tied only to the desk interface. |
+| Hardware Integration | Zebra printers, RFID readers, and scales are being treated as software-controlled parts of the workflow, not separate tools. |
+| Guided Operations | AI assistants are not only for chat; they are being shaped into guidance, troubleshooting, and training layers. |
+| Telegram Control Surface | Warehouse, inventory, and task flows can be pushed into messaging-driven operational interfaces. |
 
 ## Selected Systems
 
@@ -89,4 +105,9 @@ ERPNext
 
 ## Current Direction
 
-I am building a focused product ecosystem around ERPNext, industrial hardware, Telegram automation, and AI-driven operator workflows.
+| Next Direction | Goal |
+| --- | --- |
+| Unified Operational Fabric | Make ERPNext, mobile, hardware, and Telegram layers behave like one system instead of separate projects. |
+| Deeper AI Guidance | Turn assistants into real workflow copilots that explain, observe, and guide action. |
+| Stronger Device Intelligence | Move from simple integration into coordinated hardware orchestration across RFID, Zebra, and scale flows. |
+| Production-Grade Ecosystem | Keep converting experiments into stable product lines with clearer roles and stronger boundaries. |
