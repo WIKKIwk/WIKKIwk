@@ -6,6 +6,10 @@
 
 > This ecosystem is built around one idea: ERP should not stop at the desk. It should extend into mobile execution, device control, operator guidance, and messaging-driven workflows.
 
+## About Me
+
+I prefer my work to speak before I do. I am deeply drawn to ERP systems, logic-heavy architecture, and the kind of problems where software has to coordinate people, devices, and business motion as one system. I do not try to describe myself as strong or senior; results should be judged from the systems themselves, and criticism is useful because it helps me build the next version better. My default rule is simple: less effort, more result, and interfaces clear enough for the least technical operator to use with confidence. [Read more](./ABOUT_ME.md)
+
 ## Ecosystem Thesis
 
 I am not building isolated apps. I am building an operational fabric where:
