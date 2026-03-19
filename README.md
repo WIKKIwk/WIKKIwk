@@ -1,67 +1,87 @@
 <h1 align="center">Abdulfattox</h1>
 
-<p align="center"><strong>Industrial systems engineer focused on software that runs real operations.</strong></p>
+<p align="center"><strong>Industrial systems engineer building software for real operators, real hardware, and real business flow.</strong></p>
 
-<p align="center"><code>ERPNext</code> <code>Mobile Bridge</code> <code>RFID</code> <code>Zebra</code> <code>Telegram Ops</code> <code>AI Assistants</code></p>
+<p align="center"><code>ERPNext</code> <code>Mobile Execution</code> <code>Telegram Operations</code> <code>RFID</code> <code>Zebra</code> <code>AI Guidance</code></p>
 
-> I build operational software around ERPNext, industrial hardware, mobile workflows, and guided AI systems.
+> This ecosystem is built around one idea: ERP should not stop at the desk. It should extend into mobile execution, device control, operator guidance, and messaging-driven workflows.
 
-## Operational Snapshot
+## Ecosystem Thesis
 
-| State | Meaning |
-| --- | --- |
-| Already Built | Mobile bridge architecture, ERPNext operator modules, Zebra and RFID workflows, Telegram-driven operations, and guided AI support systems. |
-| In Motion | Tighter orchestration between ERPNext, mobile execution, hardware events, and assistant-led operator workflows. |
+I am not building isolated apps. I am building an operational fabric where:
 
-## System Topology
+- ERPNext becomes the business core
+- mobile becomes the field interface
+- Telegram becomes the control surface
+- Zebra, RFID, and scales become software-controlled workflow nodes
+- AI becomes the guidance and decision-support layer
+
+## Ecosystem Layers
 
 ```text
-ERPNext
-  |
-  +-- erpnext-mobile-bridge ------> erpnext-mobile-client
-  |
-  +-- erpnext-bridge-fields ------> external bridge actions
-  |
-  +-- zebra-scale-erpnext-core ---> Zebra / scale workflows
-  |
-  +-- rfid-zebra-scale-hybrid-core -> RFID / Zebra / scale orchestration
-  |
-  +-- erpnext-admin-ai-assistant --> guided operator support
+PEOPLE
+  Operators | Warehouse teams | Admins | Support staff
+
+INTERFACES
+  Mobile client | Telegram bots | ERP desk modules | AI assistants
+
+CONTROL LAYER
+  Mobile bridge | Stock bot core | Assignment bot | AI control modules
+
+ERP LAYER
+  ERPNext fields | Security suite | Theme suite | Backup orchestrator
+
+DEVICE LAYER
+  Zebra printers | RFID flows | UHF readers | Scales | Scanners
+
+FEEDBACK LAYER
+  Alerts | Guidance | Training | Troubleshooting | Status loops
 ```
-
-## Operating Surface
-
-| Track | Primary Systems | Purpose |
-| --- | --- | --- |
-| Mobile | [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge), [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client), [`erpnext-bridge-fields`](https://github.com/WIKKIwk/erpnext-bridge-fields) | Connect ERPNext to mobile execution and bridge-driven operations. |
-| Hardware | [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core), [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core), [`zebra-rfid-bridge-core`](https://github.com/WIKKIwk/zebra-rfid-bridge-core) | Run printer, RFID, and scale devices inside ERP workflows. |
-| ERPNext Modules | [`erpnext-ui-theme-suite`](https://github.com/WIKKIwk/erpnext-ui-theme-suite), [`erpnext-security-suite`](https://github.com/WIKKIwk/erpnext-security-suite), [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant) | Extend ERPNext with UI, protection, and guided operations. |
-| AI Systems | [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant), [`expert-answer-ai-agent`](https://github.com/WIKKIwk/expert-answer-ai-agent), [`persona-companion-agent`](https://github.com/WIKKIwk/persona-companion-agent) | Build context-aware assistants for support, response, and workflow intelligence. |
 
 ## What Exists Today
 
-| Capability | Result |
+| Capability | What has been achieved |
 | --- | --- |
-| ERPNext to Mobile | Operators can work through a dedicated bridge and mobile execution layer instead of being tied only to the desk interface. |
-| Hardware Integration | Zebra printers, RFID readers, and scales are being treated as software-controlled parts of the workflow, not separate tools. |
-| Guided Operations | AI assistants are not only for chat; they are being shaped into guidance, troubleshooting, and training layers. |
-| Telegram Control Surface | Warehouse, inventory, and task flows can be pushed into messaging-driven operational interfaces. |
+| ERPNext to Mobile | Operators can execute work through a dedicated mobile path instead of being limited to the ERP desk. |
+| Device-Oriented Operations | Zebra printers, RFID readers, scales, and scanners are being treated as workflow participants, not external accessories. |
+| Messaging Control | Telegram is already being used as an operational interface for stock, inventory, assignment, and hardware control. |
+| Guided Assistance | AI is moving beyond chat and into explanation, troubleshooting, and operator guidance. |
+| Modular ERP Core | The ecosystem already has ERPNext-side modules for bridge communication, UI customization, protection, backup, and AI support. |
 
-## Selected Systems
+## Operational Loops
 
-| Repository | Brief |
+| Loop | Flow |
 | --- | --- |
-| [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge) | Bridge service connecting ERPNext with mobile clients and operational workflows. |
-| [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client) | Flutter client for warehouse, delivery, and admin execution. |
-| [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant) | Guided AI assistant for ERPNext training, troubleshooting, and contextual help. |
-| [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core) | Go-based Zebra printer and scale integration core for ERPNext operations. |
-| [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core) | Hybrid RFID, Zebra, and scale core for multi-device industrial workflows. |
-| [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant) | Admin-only AI assistant for ERPNext operations and guided troubleshooting. |
+| Mobile Execution Loop | [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client) -> [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge) -> ERPNext |
+| Hardware Execution Loop | Operator action -> [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core) / [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core) -> ERP workflow |
+| Messaging Loop | Telegram bot -> ERPNext action -> device or stock event -> Telegram feedback |
+| Guidance Loop | ERP context -> [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant) / [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant) -> operator explanation and action support |
 
-## Repository Index
+## Core Systems
+
+| Domain | Primary Systems | Role |
+| --- | --- | --- |
+| Mobile Stack | [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge), [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client), [`erpnext-bridge-fields`](https://github.com/WIKKIwk/erpnext-bridge-fields) | Connect ERPNext with field execution, mobile workflows, and structured bridge communication. |
+| Hardware Operations | [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core), [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core), [`zebra-rfid-bridge-core`](https://github.com/WIKKIwk/zebra-rfid-bridge-core) | Coordinate Zebra, RFID, and scale hardware inside business operations. |
+| ERPNext Modules | [`erpnext-ui-theme-suite`](https://github.com/WIKKIwk/erpnext-ui-theme-suite), [`erpnext-security-suite`](https://github.com/WIKKIwk/erpnext-security-suite), [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant), [`erpnext-backup-orchestrator`](https://github.com/WIKKIwk/erpnext-backup-orchestrator) | Extend ERPNext with UI, safety, automation, resilience, and AI support. |
+| Messaging Systems | [`erpnext-stock-telegram-core`](https://github.com/WIKKIwk/erpnext-stock-telegram-core), [`erpnext-stock-telegram-bot`](https://github.com/WIKKIwk/erpnext-stock-telegram-bot), [`erpnext-assignment-telegram-bot`](https://github.com/WIKKIwk/erpnext-assignment-telegram-bot) | Turn operational workflows into messaging-driven interfaces. |
+| AI Systems | [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant), [`expert-answer-ai-agent`](https://github.com/WIKKIwk/expert-answer-ai-agent), [`persona-companion-agent`](https://github.com/WIKKIwk/persona-companion-agent) | Build guidance, explanation, expert response, and persistent AI interaction. |
+
+## Anchor Repositories
+
+| Repository | Why it matters |
+| --- | --- |
+| [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge) | Defines the bridge between ERPNext and mobile execution. |
+| [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client) | Represents the operator-facing mobile layer of the ecosystem. |
+| [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant) | Shows the shift from simple chat to guided ERP assistance. |
+| [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core) | Connects ERP workflows with real industrial weighing and printing activity. |
+| [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core) | Demonstrates multi-device orchestration instead of single-device integration. |
+| [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant) | Adds an AI operator layer directly inside ERPNext. |
+
+## Ecosystem Coverage
 
 <details>
-<summary><strong>Mobile Stack</strong></summary>
+<summary><strong>Mobile And Bridge Systems</strong></summary>
 
 - [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge)
 - [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client)
@@ -71,11 +91,14 @@ ERPNext
 </details>
 
 <details>
-<summary><strong>Hardware Operations</strong></summary>
+<summary><strong>Hardware And Device Control</strong></summary>
 
 - [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core)
 - [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core)
 - [`uhf-rfid-java-cli`](https://github.com/WIKKIwk/uhf-rfid-java-cli)
+- [`uhf-reader-core`](https://github.com/WIKKIwk/uhf-reader-core)
+- [`uhf-reader-288-csharp-core`](https://github.com/WIKKIwk/uhf-reader-288-csharp-core)
+- [`impinj-r700-rfid-core`](https://github.com/WIKKIwk/impinj-r700-rfid-core)
 - [`zebra-rfid-bridge-core`](https://github.com/WIKKIwk/zebra-rfid-bridge-core)
 - [`printer-scanner-telegram-core`](https://github.com/WIKKIwk/printer-scanner-telegram-core)
 - [`industrial-scale-simulator`](https://github.com/WIKKIwk/industrial-scale-simulator)
@@ -83,31 +106,45 @@ ERPNext
 </details>
 
 <details>
-<summary><strong>ERPNext Modules</strong></summary>
+<summary><strong>ERPNext Extensions</strong></summary>
 
 - [`erpnext-ui-theme-suite`](https://github.com/WIKKIwk/erpnext-ui-theme-suite)
 - [`erpnext-security-suite`](https://github.com/WIKKIwk/erpnext-security-suite)
 - [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant)
-- [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant)
+- [`erpnext-admin-ai-legacy`](https://github.com/WIKKIwk/erpnext-admin-ai-legacy)
+- [`erpnext-zebra-zd621-ops-module`](https://github.com/WIKKIwk/erpnext-zebra-zd621-ops-module)
+- [`erpnext-backup-orchestrator`](https://github.com/WIKKIwk/erpnext-backup-orchestrator)
 
 </details>
 
 <details>
-<summary><strong>Web And AI Products</strong></summary>
+<summary><strong>Messaging And Operator Control</strong></summary>
+
+- [`erpnext-stock-telegram-core`](https://github.com/WIKKIwk/erpnext-stock-telegram-core)
+- [`erpnext-stock-telegram-bot`](https://github.com/WIKKIwk/erpnext-stock-telegram-bot)
+- [`erpnext-assignment-telegram-bot`](https://github.com/WIKKIwk/erpnext-assignment-telegram-bot)
+- [`erpnext-uhf-telegram-core`](https://github.com/WIKKIwk/erpnext-uhf-telegram-core)
+- [`inventory-ops-telegram-controller`](https://github.com/WIKKIwk/inventory-ops-telegram-controller)
+
+</details>
+
+<details>
+<summary><strong>Adjacent Products And Experiments</strong></summary>
 
 - [`abdulfattox-web`](https://github.com/WIKKIwk/abdulfattox-web)
 - [`commerce-web-platform`](https://github.com/WIKKIwk/commerce-web-platform)
 - [`ai-sheets-platform`](https://github.com/WIKKIwk/ai-sheets-platform)
 - [`expert-answer-ai-agent`](https://github.com/WIKKIwk/expert-answer-ai-agent)
 - [`persona-companion-agent`](https://github.com/WIKKIwk/persona-companion-agent)
+- [`ai-sales-operator`](https://github.com/WIKKIwk/ai-sales-operator)
 
 </details>
 
-## Current Direction
+## Where It Is Going
 
-| Next Direction | Goal |
+| Direction | Intent |
 | --- | --- |
-| Unified Operational Fabric | Make ERPNext, mobile, hardware, and Telegram layers behave like one system instead of separate projects. |
-| Deeper AI Guidance | Turn assistants into real workflow copilots that explain, observe, and guide action. |
-| Stronger Device Intelligence | Move from simple integration into coordinated hardware orchestration across RFID, Zebra, and scale flows. |
-| Production-Grade Ecosystem | Keep converting experiments into stable product lines with clearer roles and stronger boundaries. |
+| Unified Operational Fabric | Make ERPNext, mobile, messaging, hardware, and AI behave like one coordinated system. |
+| Stronger Device Intelligence | Move from device integration into event-aware hardware orchestration. |
+| Guided Operator Experience | Let AI explain, observe, and guide users through operational tasks instead of only answering questions. |
+| Productized Platform Boundaries | Turn experiments and prototypes into clearer, stable product lines with stronger identity. |
