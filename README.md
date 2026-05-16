@@ -46,6 +46,20 @@ In practice, that means:
 - Search and filtering support less technical users instead of punishing them.
 - AI helps explain, guide, and reduce confusion when the workflow becomes hard.
 
+## Organization
+
+I maintain [`accord-erp-automation`](https://github.com/accord-erp-automation)
+as the production home for my ERPNext ecosystem work.
+
+The organization collects the systems that are no longer just experiments:
+mobile backends, Flutter clients, ERPNext custom fields, read-optimized
+services, scale/Zebra integrations, and workflow automation around real
+warehouse and delivery operations.
+
+Its purpose is to keep the ecosystem organized: one place for production-grade
+ERPNext services, release-ready components, tested backend work, and
+field-oriented operational tools.
+
 ## Current Production Proof
 
 The clearest current proof of this direction lives under
