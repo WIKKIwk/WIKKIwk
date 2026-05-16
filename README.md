@@ -80,20 +80,16 @@ Current public release:
 ```mermaid
 flowchart TB
     ERP["ERPNext<br/>business core"]
-    Services["Service layer<br/>Rust / Go / read models"]
-    Mobile["Mobile execution<br/>supplier / customer / Werka / admin"]
-    Hardware["Hardware roots<br/>scales / Zebra / RFID / scanners"]
-    Feedback["Feedback loops<br/>push / Telegram / activity"]
-    AI["AI assistance<br/>search / explanation / guidance"]
+    Services["Service layer<br/>Rust / Go services<br/>read models / REST"]
+    Execution["Execution layer<br/>mobile / hardware / workflows"]
+    Intelligence["Intelligence layer<br/>AI guidance / search<br/>operator support"]
+    Feedback["Feedback layer<br/>push / Telegram<br/>activity history"]
 
     ERP --> Services
-    Services --> Mobile
-    Services --> Hardware
-    Services --> Feedback
-    Services --> AI
-    Mobile --> Feedback
-    Hardware --> Feedback
-    AI --> Mobile
+    Services --> Execution
+    Execution --> Intelligence
+    Intelligence --> Feedback
+    Feedback --> ERP
 ```
 
 ## Engineering Rules I Respect
