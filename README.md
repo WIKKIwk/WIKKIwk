@@ -1,154 +1,135 @@
 <h1 align="center">Abdulfattox</h1>
 
-<p align="center"><strong>Industrial systems engineer building software for real operators, real hardware, and real business flow.</strong></p>
+<p align="center"><strong>Industrial systems engineer focused on ERPNext, mobile execution, hardware workflows, and AI-assisted operations.</strong></p>
 
-<p align="center"><code>ERPNext</code> <code>Mobile Execution</code> <code>Telegram Operations</code> <code>RFID</code> <code>Zebra</code> <code>AI Guidance</code></p>
+<p align="center">
+  <code>ERPNext</code>
+  <code>Rust</code>
+  <code>Go</code>
+  <code>Flutter</code>
+  <code>MariaDB</code>
+  <code>Industrial Hardware</code>
+  <code>AI Guidance</code>
+</p>
 
-> This ecosystem is built around one idea: ERP should not stop at the desk. It should extend into mobile execution, device control, operator guidance, and messaging-driven workflows.
+> I build operational software where ERPNext is not only a desk system, but the
+> center of mobile work, device control, warehouse flow, messaging, and guided
+> decision support.
 
-## About Me
+## Engineering Thesis
 
-I prefer my work to speak before I do. I am deeply drawn to ERP systems, logic-heavy architecture, and the kind of problems where software has to coordinate people, devices, and business motion as one system. I do not try to describe myself as strong or senior; results should be judged from the systems themselves, and criticism is useful because it helps me build the next version better. My default rule is simple: less effort, more result, and interfaces clear enough for the least technical operator to use with confidence. [Read more](./ABOUT_ME.md)
+I am interested in systems that connect business logic with real operators and
+real constraints. ERPNext is the core. Mobile is the field interface. Hardware
+is part of the workflow. Messaging gives operations a control surface. AI should
+explain, guide, and reduce confusion instead of becoming another disconnected
+tool.
 
-## Ecosystem Thesis
+The goal is not to build isolated apps. The goal is to make business movement
+visible, controllable, and easier to execute.
 
-I am not building isolated apps. I am building an operational fabric where:
+## Current Production Work
 
-- ERPNext becomes the business core
-- mobile becomes the field interface
-- Telegram becomes the control surface
-- Zebra, RFID, and scales become software-controlled workflow nodes
-- AI becomes the guidance and decision-support layer
+My active production work now lives under
+[`accord-erp-automation`](https://github.com/accord-erp-automation): a focused
+ERPNext automation organization for warehouse, delivery, mobile, scale, Zebra,
+and read-optimized ERP services.
 
-## Ecosystem Layers
+| System | Stack | Purpose |
+| --- | --- | --- |
+| [`accord_mobile_server_rs`](https://github.com/accord-erp-automation/accord_mobile_server_rs) | Rust, Axum, Tokio, SQLx, LMDB | Production mobile backend for ERPNext workflows with direct MariaDB reads, ERPNext REST mutations, FCM push, Gemini Vision, and mobile API compatibility. |
+| [`accord_mobile`](https://github.com/accord-erp-automation/accord_mobile) | Flutter, Dart | Mobile app for supplier, customer, Werka, warehouse, delivery, and admin workflows. |
+| [`accord_erp_custom_field`](https://github.com/accord-erp-automation/accord_erp_custom_field) | Python, Frappe | ERPNext custom field module for structured bridge-service filtering and communication. |
+| [`gscale-platform`](https://github.com/accord-erp-automation/gscale-platform) | Go | Scale, Zebra, Telegram, archive, mobile API, and ERPNext workflow orchestration. |
+| [`gscale-erp-read-rs`](https://github.com/accord-erp-automation/gscale-erp-read-rs) | Rust | Read-only ERP catalog service for item and warehouse lookup over ERPNext/MariaDB. |
+
+Current public release:
+
+- [`accord_mobile_server_rs v1.1.0`](https://github.com/accord-erp-automation/accord_mobile_server_rs/releases/tag/v1.1.0)
+
+## System Model
 
 ```text
-PEOPLE
-  Operators | Warehouse teams | Admins | Support staff
+ERPNext
+  Documents | permissions | business rules | operational source of truth
 
-INTERFACES
-  Mobile client | Telegram bots | ERP desk modules | AI assistants
+Direct Read Models
+  MariaDB projections | search | summaries | dashboards | low-latency lookup
 
-CONTROL LAYER
-  Mobile bridge | Stock bot core | Assignment bot | AI control modules
+Mobile Execution
+  Supplier | customer | Werka | admin | delivery | warehouse workflows
 
-ERP LAYER
-  ERPNext fields | Security suite | Theme suite | Backup orchestrator
+Hardware Operations
+  Scales | Zebra printers | RFID | scanners | shop-floor devices
 
-DEVICE LAYER
-  Zebra printers | RFID flows | UHF readers | Scales | Scanners
+Control Surfaces
+  Telegram bots | admin tools | notifications | operational feedback loops
 
-FEEDBACK LAYER
-  Alerts | Guidance | Training | Troubleshooting | Status loops
+AI Assistance
+  Image search | explanation | troubleshooting | operator guidance
 ```
 
-## What Exists Today
+## What I Care About
 
-| Capability | What has been achieved |
-| --- | --- |
-| ERPNext to Mobile | Operators can execute work through a dedicated mobile path instead of being limited to the ERP desk. |
-| Device-Oriented Operations | Zebra printers, RFID readers, scales, and scanners are being treated as workflow participants, not external accessories. |
-| Messaging Control | Telegram is already being used as an operational interface for stock, inventory, assignment, and hardware control. |
-| Guided Assistance | AI is moving beyond chat and into explanation, troubleshooting, and operator guidance. |
-| Modular ERP Core | The ecosystem already has ERPNext-side modules for bridge communication, UI customization, protection, backup, and AI support. |
+- ERPNext should remain the source of truth for business mutations.
+- Direct database access should be read-only, measured, and contract-safe.
+- Mobile workflows should work for real staff, not only technical users.
+- Search and filtering should help less technical users, not punish them.
+- Hardware integrations should be treated as production systems, not demos.
+- Performance claims should come from benchmarks, not assumptions.
+- The best interface is the one that needs the least explanation.
 
-## Operational Loops
+## Public Research Lineage
 
-| Loop | Flow |
-| --- | --- |
-| Mobile Execution Loop | [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client) -> [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge) -> ERPNext |
-| Hardware Execution Loop | Operator action -> [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core) / [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core) -> ERP workflow |
-| Messaging Loop | Telegram bot -> ERPNext action -> device or stock event -> Telegram feedback |
-| Guidance Loop | ERP context -> [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant) / [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant) -> operator explanation and action support |
+Before the current Accord production organization, I explored the same
+operational direction through smaller public projects under this account.
 
-## Core Systems
-
-| Domain | Primary Systems | Role |
+| Domain | Repositories | Role |
 | --- | --- | --- |
-| Mobile Stack | [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge), [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client), [`erpnext-bridge-fields`](https://github.com/WIKKIwk/erpnext-bridge-fields) | Connect ERPNext with field execution, mobile workflows, and structured bridge communication. |
-| Hardware Operations | [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core), [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core), [`zebra-rfid-bridge-core`](https://github.com/WIKKIwk/zebra-rfid-bridge-core) | Coordinate Zebra, RFID, and scale hardware inside business operations. |
-| ERPNext Modules | [`erpnext-ui-theme-suite`](https://github.com/WIKKIwk/erpnext-ui-theme-suite), [`erpnext-security-suite`](https://github.com/WIKKIwk/erpnext-security-suite), [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant), [`erpnext-backup-orchestrator`](https://github.com/WIKKIwk/erpnext-backup-orchestrator) | Extend ERPNext with UI, safety, automation, resilience, and AI support. |
-| Messaging Systems | [`erpnext-stock-telegram-core`](https://github.com/WIKKIwk/erpnext-stock-telegram-core), [`erpnext-stock-telegram-bot`](https://github.com/WIKKIwk/erpnext-stock-telegram-bot), [`erpnext-assignment-telegram-bot`](https://github.com/WIKKIwk/erpnext-assignment-telegram-bot) | Turn operational workflows into messaging-driven interfaces. |
-| AI Systems | [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant), [`expert-answer-ai-agent`](https://github.com/WIKKIwk/expert-answer-ai-agent), [`persona-companion-agent`](https://github.com/WIKKIwk/persona-companion-agent) | Build guidance, explanation, expert response, and persistent AI interaction. |
+| ERPNext mobile bridge | [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge), [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client), [`erpnext-bridge-fields`](https://github.com/WIKKIwk/erpnext-bridge-fields) | Early mobile execution and bridge-service architecture around ERPNext. |
+| Hardware operations | [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core), [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core), [`zebra-rfid-bridge-core`](https://github.com/WIKKIwk/zebra-rfid-bridge-core) | Experiments around Zebra, RFID, weighing, and device-controlled ERP workflows. |
+| Messaging systems | [`erpnext-stock-telegram-core`](https://github.com/WIKKIwk/erpnext-stock-telegram-core), [`erpnext-stock-telegram-bot`](https://github.com/WIKKIwk/erpnext-stock-telegram-bot), [`erpnext-assignment-telegram-bot`](https://github.com/WIKKIwk/erpnext-assignment-telegram-bot) | Telegram as an operational interface for stock, assignment, and field feedback. |
+| ERPNext modules | [`erpnext-ui-theme-suite`](https://github.com/WIKKIwk/erpnext-ui-theme-suite), [`erpnext-security-suite`](https://github.com/WIKKIwk/erpnext-security-suite), [`erpnext-backup-orchestrator`](https://github.com/WIKKIwk/erpnext-backup-orchestrator) | ERPNext UI, safety, backup, and operational hardening experiments. |
+| AI guidance | [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant), [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant), [`expert-answer-ai-agent`](https://github.com/WIKKIwk/expert-answer-ai-agent) | AI assistance for explanation, troubleshooting, expert answers, and ERPNext support. |
 
-## Anchor Repositories
+## Operating Principles
 
-| Repository | Why it matters |
-| --- | --- |
-| [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge) | Defines the bridge between ERPNext and mobile execution. |
-| [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client) | Represents the operator-facing mobile layer of the ecosystem. |
-| [`erpnext-guided-ai-assistant`](https://github.com/WIKKIwk/erpnext-guided-ai-assistant) | Shows the shift from simple chat to guided ERP assistance. |
-| [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core) | Connects ERP workflows with real industrial weighing and printing activity. |
-| [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core) | Demonstrates multi-device orchestration instead of single-device integration. |
-| [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant) | Adds an AI operator layer directly inside ERPNext. |
+### Keep the business system understandable
 
-## Ecosystem Coverage
+ERP software can become heavy quickly. I prefer architecture where each layer
+has a clear job: ERPNext owns business truth, services expose faster workflows,
+mobile keeps operators focused, and hardware joins the process through explicit
+interfaces.
 
-<details>
-<summary><strong>Mobile And Bridge Systems</strong></summary>
+### Optimize only after preserving meaning
 
-- [`erpnext-mobile-bridge`](https://github.com/WIKKIwk/erpnext-mobile-bridge)
-- [`erpnext-mobile-client`](https://github.com/WIKKIwk/erpnext-mobile-client)
-- [`erpnext-bridge-fields`](https://github.com/WIKKIwk/erpnext-bridge-fields)
-- [`erpnext-bot-bootstrap`](https://github.com/WIKKIwk/erpnext-bot-bootstrap)
+A faster system is not useful if it changes business behavior. Read paths can
+be optimized aggressively, but only when the result shape and operational
+meaning stay the same.
 
-</details>
+### Build for the least-trained operator in the loop
 
-<details>
-<summary><strong>Hardware And Device Control</strong></summary>
+Industrial software should not assume perfect training. If the least technical
+operator can use the flow without confusion, stronger users will move faster
+through it naturally.
 
-- [`zebra-scale-erpnext-core`](https://github.com/WIKKIwk/zebra-scale-erpnext-core)
-- [`rfid-zebra-scale-hybrid-core`](https://github.com/WIKKIwk/rfid-zebra-scale-hybrid-core)
-- [`uhf-rfid-java-cli`](https://github.com/WIKKIwk/uhf-rfid-java-cli)
-- [`uhf-reader-core`](https://github.com/WIKKIwk/uhf-reader-core)
-- [`uhf-reader-288-csharp-core`](https://github.com/WIKKIwk/uhf-reader-288-csharp-core)
-- [`impinj-r700-rfid-core`](https://github.com/WIKKIwk/impinj-r700-rfid-core)
-- [`zebra-rfid-bridge-core`](https://github.com/WIKKIwk/zebra-rfid-bridge-core)
-- [`printer-scanner-telegram-core`](https://github.com/WIKKIwk/printer-scanner-telegram-core)
-- [`industrial-scale-simulator`](https://github.com/WIKKIwk/industrial-scale-simulator)
+### Let the work carry the claim
 
-</details>
+I avoid overstating myself. I would rather show working systems, measured
+results, and clear architecture. Criticism is useful when it makes the next
+version stronger.
 
-<details>
-<summary><strong>ERPNext Extensions</strong></summary>
-
-- [`erpnext-ui-theme-suite`](https://github.com/WIKKIwk/erpnext-ui-theme-suite)
-- [`erpnext-security-suite`](https://github.com/WIKKIwk/erpnext-security-suite)
-- [`erpnext-admin-ai-assistant`](https://github.com/WIKKIwk/erpnext-admin-ai-assistant)
-- [`erpnext-admin-ai-legacy`](https://github.com/WIKKIwk/erpnext-admin-ai-legacy)
-- [`erpnext-zebra-zd621-ops-module`](https://github.com/WIKKIwk/erpnext-zebra-zd621-ops-module)
-- [`erpnext-backup-orchestrator`](https://github.com/WIKKIwk/erpnext-backup-orchestrator)
-
-</details>
-
-<details>
-<summary><strong>Messaging And Operator Control</strong></summary>
-
-- [`erpnext-stock-telegram-core`](https://github.com/WIKKIwk/erpnext-stock-telegram-core)
-- [`erpnext-stock-telegram-bot`](https://github.com/WIKKIwk/erpnext-stock-telegram-bot)
-- [`erpnext-assignment-telegram-bot`](https://github.com/WIKKIwk/erpnext-assignment-telegram-bot)
-- [`erpnext-uhf-telegram-core`](https://github.com/WIKKIwk/erpnext-uhf-telegram-core)
-- [`inventory-ops-telegram-controller`](https://github.com/WIKKIwk/inventory-ops-telegram-controller)
-
-</details>
-
-<details>
-<summary><strong>Adjacent Products And Experiments</strong></summary>
-
-- [`abdulfattox-web`](https://github.com/WIKKIwk/abdulfattox-web)
-- [`commerce-web-platform`](https://github.com/WIKKIwk/commerce-web-platform)
-- [`ai-sheets-platform`](https://github.com/WIKKIwk/ai-sheets-platform)
-- [`expert-answer-ai-agent`](https://github.com/WIKKIwk/expert-answer-ai-agent)
-- [`persona-companion-agent`](https://github.com/WIKKIwk/persona-companion-agent)
-- [`ai-sales-operator`](https://github.com/WIKKIwk/ai-sales-operator)
-
-</details>
-
-## Where It Is Going
+## Direction
 
 | Direction | Intent |
 | --- | --- |
-| Unified Operational Fabric | Make ERPNext, mobile, messaging, hardware, and AI behave like one coordinated system. |
-| Stronger Device Intelligence | Move from device integration into event-aware hardware orchestration. |
-| Guided Operator Experience | Let AI explain, observe, and guide users through operational tasks instead of only answering questions. |
-| Productized Platform Boundaries | Turn experiments and prototypes into clearer, stable product lines with stronger identity. |
+| ERPNext-centered operations | Keep ERPNext as the operational core while making the surrounding execution layer faster and easier to use. |
+| Mobile-first field work | Move warehouse, delivery, supplier, customer, and admin workflows out of desk-only usage. |
+| Hardware-aware workflows | Treat scales, printers, RFID, and scanners as active workflow nodes. |
+| AI-assisted operation | Use AI to guide, explain, search, and reduce operator confusion. |
+| Productized platform boundaries | Turn prototypes into stable services with clear ownership, release notes, tests, and deployment rules. |
+
+## More
+
+- Organization: [`accord-erp-automation`](https://github.com/accord-erp-automation)
+- Profile website: [`abdulfattox-web`](https://github.com/WIKKIwk/abdulfattox-web)
+- Personal note: [`ABOUT_ME.md`](./ABOUT_ME.md)
