@@ -77,24 +77,23 @@ Current public release:
 
 ## Ecosystem Shape
 
-```text
-ERPNext
-  Business documents | permissions | hooks | source of truth
+```mermaid
+flowchart TB
+    ERP["ERPNext<br/>business core"]
+    Services["Service layer<br/>Rust / Go / read models"]
+    Mobile["Mobile execution<br/>supplier / customer / Werka / admin"]
+    Hardware["Hardware roots<br/>scales / Zebra / RFID / scanners"]
+    Feedback["Feedback loops<br/>push / Telegram / activity"]
+    AI["AI assistance<br/>search / explanation / guidance"]
 
-Service Layer
-  Rust and Go services | direct read models | REST mutations | local state
-
-Mobile Execution
-  Supplier | customer | Werka | admin | warehouse | delivery
-
-Hardware Roots
-  Scales | Zebra printers | RFID | scanners | shop-floor devices
-
-Operational Feedback
-  Push notifications | Telegram loops | status tracking | activity history
-
-AI Assistance
-  Image search | explanation | troubleshooting | user guidance
+    ERP --> Services
+    Services --> Mobile
+    Services --> Hardware
+    Services --> Feedback
+    Services --> AI
+    Mobile --> Feedback
+    Hardware --> Feedback
+    AI --> Mobile
 ```
 
 ## Engineering Rules I Respect
