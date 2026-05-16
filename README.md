@@ -78,7 +78,7 @@ Current public release:
 ## Ecosystem Shape
 
 ```mermaid
-flowchart TB
+flowchart LR
     ERP["ERPNext<br/>business core"]
     Services["Service layer<br/>Rust / Go services<br/>read models / REST"]
     Execution["Execution layer<br/>mobile / hardware / workflows"]
